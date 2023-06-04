@@ -1,0 +1,171 @@
+@font-face {
+    font-family: Montserrat;
+    src:url("fonts/Montserrat.ttf");
+}
+@font-face {
+    font-family: 'Open Sans';
+    src:url("fonts/OpenSans.ttf");
+}
+
+@keyframes pulse {
+    0% {fill:#ffffff;}
+    60% {fill:#ffffff;}
+    80% {fill:#95a5a6;}
+    100% {fill:#ffffff;}
+}
+body{
+    margin:0;
+    padding:0;
+    background-color: #232323;
+    font-size: 4vh;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+}
+#logo{
+    position:fixed;
+    width: 70vh;
+    max-width: 80vw;
+    top: 50%;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    fill:#ffffff;
+    animation-name: pulse;
+    animation-timing-function: linear;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    transition: top 1.5s ease-in-out;
+}
+#logo.logoabout{
+    top: 35%;
+}
+#desc{
+    font-family: 'Open Sans', sans-serif;
+    position:fixed;
+    width: 70vh;
+    max-width: 80vw;
+    left:50vw;
+    transform: translate(-50%,-50%);
+    top:65%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease 1.5s;
+}
+#desc.visible{
+    opacity:1;
+}
+#githubLogo{
+    position:fixed;
+    width: 6vh;
+    bottom: 2vh;
+    right: 2vh;
+}
+#instagramLogo{
+    position:fixed;
+    width: 6vh;
+    bottom: 2vh;
+    right: 10vh;
+}
+#hamburgerIcon{
+    position:fixed;
+    width: 4vh;
+    top: 4vh;
+    left: 4vh;
+    z-index: 20;
+}
+#menu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 10;
+    margin:0;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0;
+    position: fixed;
+    top:0;
+    left:-50vh;
+    width:50vh;
+    max-width: 70vw;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+#menucloser{
+    position: fixed;
+    top:0;left:0;
+    width:100vw; height: 100vh;
+    z-index:9; /*just before menu*/
+    display: none;
+}
+#menucloser.expanded{
+    display: block;
+}
+/*
+#nav:hover #menu{
+    left:0;
+}
+*/
+#menu.expanded{
+    left:0;
+}
+#menu #about{
+    margin-top: auto;
+    cursor: pointer;
+}
+#menu span{
+    height: 10vh;
+    margin:0;
+    padding:0;
+}
+#menu a{
+    display:block;
+    padding:2vh 4vh;
+    text-decoration: none;
+}
+.hoverable{
+    transition-property: fill, color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    fill: #ffffff;
+    color: #ffffff;
+}
+.hoverable:hover{
+    fill: #95a5a6;
+    color: #95a5a6;
+}
+
+#bandcampplayer{
+    position:fixed;
+    width: 10vh;
+    height: 10vh;
+    top: 2vh;
+    right: 2vh;
+    border: 0;   
+}
+
+#cookie-banner{
+    padding: 1vh;
+    background-color:#232323;
+    z-index: 500;
+    font-size: 1.5vh;
+    position: fixed;
+    width: 500px;
+    bottom: 2vh;
+    left: 2vh;
+    border: 0;  
+}
+
+#cookie-banner.is-hidden{
+    visibility: hidden;
+}
+
+h1{
+    font-weight:normal;
+}
+h2{
+    font-weight:normal;
+}
